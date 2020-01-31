@@ -2,59 +2,23 @@
 using namespace std;
 int main()
 {
- int c=0,d,i,j;
+ int c=0,d,x,y,i,j;
  int a[5][5];
  for(i=0;i<5;i++)
  {
      for(j=0;j<5;j++)
-     cin>>a[i][j];
- }
-for(i=0;i<5;i++)
- {
-     for(j=0;j<5;j++)
      {
+     cin>>a[i][j];
          if(a[i][j]==1)
          {
-             if(i<=2&&j<=2)
-             {
-                 c=2-j;
-                 c=c+(2-i);
-                 d++;
-                 break;
-             }
-             if(i<=2&&j>=2)
-             {
-                 c=j-2;
-                 c=c+(2-i);
-                 d++;
-                 break;
-             }
-             if(i>2&&j<=2)
-             {
-                 c=2-j;
-                 c=c+(i-2);
-                 d++;
-                 break;
-             }
-             if(i>2&&j>=2)
-             {
-                 c=j-2;
-                 c=c+(i-2);
-                 d++;
-                 break;
-             }
-             
-         }
-      
-     }
-      if(d>0)
-         break; 
-      
+             x=i;
+             y=j;
+             break;
     }
- cout<<c;
+ }
+ }
+ cout<<abs(x-2)+abs(y-2);
 }
- 
- 
  
 
     
